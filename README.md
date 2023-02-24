@@ -1,5 +1,5 @@
 # phpappgb
-Essa é uma outra versão que desenvolvi do PHPApp, essa versão foi desenvolvida no Gambas3, com o PHPApp você consegue rodar e desenvolver aplicativos em PHP para desktop.
+Essa é uma outra versão que desenvolvi do PHPApp, essa versão foi desenvolvida no Gambas3, com o PHPAppGB você consegue rodar e desenvolver aplicativos em PHP para desktop.
 
 O PHPAppGB tem uma única diferença do PHPApp que desenvolvi em Python, as portas são geradas pelo sistema assim que chamado o php para iniciar o servidor embutido, ao usar o localhost:0 automaticamente uma porta é definida, ao invés de usar a função socket para isso.
 
