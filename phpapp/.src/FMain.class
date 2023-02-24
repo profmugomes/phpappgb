@@ -1,0 +1,39 @@
+' Gambas class file
+
+Private sProcess As Process
+Private sPort As Integer = 0
+Private sCount As Integer = 1
+
+Public Sub Form_Resize()
+  wb.Width = Me.Width
+  wb.Height = Me.Height
+End
+
+Private Sub lh_Start()
+  sProcess = Shell "php -S localhost:0 -t " & Application.Path & "/www/" For Input As "Process"
+End
+
+Public Sub Process_Read()
+  Dim sLine As String
+  Dim sHost As String
+  
+  Read #Last, sLine, -256
+  
+  If Not sLine = "" Then
+    If sCount = 1 Then
+      Shell "echo '" & sLine & "' | grep -oh 'localhost:[0-9]*'" Wait To sHost
+      Print sLine
+      wb.Url = "http://" & sHost 
+      
+      sCount = 2
+    Endif
+  Endif 
+End
+
+Public Sub Form_Open()
+  lh_Start()
+End
+
+Public Sub Form_Close()
+  sProcess.Kill()
+End
