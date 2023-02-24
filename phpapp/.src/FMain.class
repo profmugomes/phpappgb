@@ -1,7 +1,12 @@
 ' Gambas class file
 
+'phpapp
+'Author Murilo Gomes <contatoprofmugomes@gmail.com>
+'Copyright (c) 2023 Murilo Gomes
+'License GPL-2.0
+'Version 1.0.0, 2023-02-20
+
 Private sProcess As Process
-Private sPort As Integer = 0
 Private sCount As Integer = 1
 
 Public Sub Form_Resize()
