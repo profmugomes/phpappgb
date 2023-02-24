@@ -1,8 +1,0 @@
-# Gambas Form File 3.0
-
-{ Form Form
-  MoveScaled(0,0,85,57)
-  { wb WebView
-    MoveScaled(0,0,32,20)
-  }
-}
