@@ -27,7 +27,7 @@ Public Sub Process_Read()
   If Not sLine = "" Then
     If sCount = 1 Then
       Shell "echo '" & sLine & "' | grep -oh 'localhost:[0-9]*'" Wait To sHost
-      Print sLine
+      
       wb.Url = "http://" & sHost 
       
       sCount = 2
