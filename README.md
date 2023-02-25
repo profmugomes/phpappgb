@@ -7,7 +7,7 @@ Requer as dependências do repositório do Gambas3 para funcionar.
 
 Versão do Gambas3: 3.18
 
-Requerimento
+## Requerimento
 - Sistema Operacional: GNU/Linux Lubuntu
 - Repositório do Gambas3
 - gambas3-gb-image
@@ -18,17 +18,23 @@ Requerimento
 
 Testado no Lubuntu
 
-Instalação
+## Instalação
 
 Ative o repositório do Gambas3 (estável)
-- sudo add-apt-repository ppa:gambas-team/gambas3
-- sudo apt update
+
+```sh
+sudo add-apt-repository ppa:gambas-team/gambas3
+sudo apt update
+```
 
 Instale as dependências necessárias
-- sudo apt install gambas3-dev gambas3-gb-image gambas3-gb-gtk3 gambas3-gb-form gambas3-gb-gtk3-webview php-cli
+
+```sh
+sudo apt install gambas3-dev gambas3-gb-image gambas3-gb-gtk3 gambas3-gb-form gambas3-gb-gtk3-webview php-cli
+```
 
 Pronto! Após a instalação das dependências necessárias é só rodar o PHPApp.
 
-Usando o PHPApp (versão Gambas3)
+## Usando o PHPApp (versão Gambas3)
 - Crie um arquivo index.php na pasta www
 - Clique duas vezes sobre o phpapp.gambas
