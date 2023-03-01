@@ -6,15 +6,16 @@
 'License GPL-2.0
 'Version 1.0.0, 2023-02-20
 
-Private sProcess As Process
-Private sCount As Integer = 1
+Public sProcess As Process
+Public sCount As Integer = 1
+Public sURL As String = ""
 
 Public Sub Form_Resize()
   wb.Width = Me.Width
   wb.Height = Me.Height
 End
 
-Private Sub lh_Start()
+Public Sub lh_Start()
   sProcess = Shell "php -S localhost:0 -t " & Application.Path & "/www/" For Input As "Process"
 End
 
@@ -36,9 +37,19 @@ Public Sub Process_Read()
 End
 
 Public Sub Form_Open()
-  lh_Start()
+  If sURL.Len > 0 Then
+    wb.Url = sURL
+  Endif
 End
 
 Public Sub Form_Close()
-  sProcess.Kill()
+  If sURL = "" Then 
+    sProcess.Kill()
+  Endif 
+End
+
+Public Sub wb_NewView()
+  Dim FBrowser As New FMain
+  FBrowser.sURL = wb.Link
+  FBrowser.Show()
 End

@@ -1,7 +1,7 @@
 # Gambas Project File 3.0
 Title=PHPApp
-Startup=FMain
-Version=0.0.4
+Startup=Main
+Version=0.0.5
 Component=gb.image
 Component=gb.gtk3
 Component=gb.form

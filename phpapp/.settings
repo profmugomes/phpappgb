@@ -1,10 +1,16 @@
 [Debug]
 Breakpoints={}
 
+[DebugWindow]
+Count=0
+
 [Executable]
 DoNotIncrementVersion=False
 NoTestModule=False
 
 [OpenFile]
+Count=0
+
+[Watches]
 Count=0
 

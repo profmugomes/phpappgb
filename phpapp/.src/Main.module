@@ -1,0 +1,6 @@
+' Gambas module file
+
+Public Sub Main()
+  FMain.lh_Start()
+  FMain.Show()
+End
